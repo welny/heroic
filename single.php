@@ -37,9 +37,7 @@ $current_options = wp_parse_args(  get_option( 'quality_pro_options', array() ),
 				<?php echo get_the_date('M j, Y'); ?></a>
 			</div>	
 			<?php } ?>
-			<header class="entry-header">
-				<h2 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-			</header>	
+
 			<div class="entry-content">
 			<?php
 				the_content(); 
