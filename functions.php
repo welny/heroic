@@ -239,4 +239,14 @@ add_action( 'customize_register', 'heroic_remove_custom', 1000 );
 function heroic_remove_custom($wp_customize) {
  $wp_customize->remove_section( 'theme_color' );
 }
+
+// убираем dns-prefetch
+remove_action( 'wp_head', 'wp_resource_hints', 2 );
+// убираем стили и скрипт emoji
+remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
+remove_action( 'wp_print_styles', 'print_emoji_styles' );
+
+// убираем meta generator и короткую ссылку на материалы
+remove_action( 'wp_head', 'wp_generator' );
+remove_action( 'wp_head', 'wp_shortlink_wp_head' );
 ?>
