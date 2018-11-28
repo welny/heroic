@@ -177,11 +177,15 @@ add_action( 'customize_register', 'heroic_slider_customizer' );
 //Remove Banner Image
 function heroic_banner_image()
 {
-$remove_banner_image = get_theme_mod('remove_banner_image',false);
-if($remove_banner_image !=true)
-{
- get_template_part('index','static');	
-}
+    $remove_banner_image = get_theme_mod('remove_banner_image', false);
+    if ($remove_banner_image != true) {
+        if (is_home() || is_front_page()) {
+            get_template_part('index', 'static');
+        } else {
+            get_template_part('slider', 'small');
+        }
+
+    }
 }
 
 
