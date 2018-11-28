@@ -158,6 +158,7 @@ table td > a { color: #395ca3; font-weight: 600; box-shadow: 0 1px 0 0 currentCo
 /*	PAGE TITLE SECTION 
 /*===================================================================================*/
 
+.page-breadcrumb > li { color: #6a6a6a; }
 .page-breadcrumb > li a:hover, .page-breadcrumb > li a:focus { color: #395ca3; }
 
 /*===================================================================================*/
