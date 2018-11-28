@@ -204,10 +204,9 @@ endif;
 
 
 // Read more tag to formatting in blog page 
-  	function heroic_new_content_more($more)
-	{  global $post;
-		return '<p><a href="' . get_permalink() . "#more-{$post->ID}\" class=\"more-link\">" .__('Read More','heroic')."</a></p>";
-	}
+function heroic_new_content_more($more) {
+    return '<p><a href="' . get_permalink() . "\" class=\"more-link\">" .__('Read More','heroic')."</a></p>";
+}
 add_filter( 'excerpt_more', 'heroic_new_content_more' );
 
 
